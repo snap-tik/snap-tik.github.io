@@ -510,9 +510,7 @@
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Protection Layer
         setTimeout(() => {
-          // Prevent right-click
           document.addEventListener("contextmenu", (e) => {
             if (e.target.tagName !== "INPUT") {
               e.preventDefault();
@@ -520,7 +518,6 @@
             }
           });
 
-          // Prevent keyboard shortcuts
           document.addEventListener("keydown", (e) => {
             if (
               e.target.tagName !== "INPUT" &&
@@ -535,7 +532,6 @@
             }
           });
 
-          // Console Protection
           setInterval(() => {
             console.clear();
             console.log(
@@ -548,7 +544,6 @@
             );
           }, 2000);
 
-          // Anti-debug
           (function () {
             let counter = 0;
             const checkDebug = () => {
